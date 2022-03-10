@@ -128,6 +128,16 @@ class UnitTestPresenterTests: XCTestCase {
         XCTAssertGreaterThan(10, 1)
     }
     
+    func test_Assert_Type_Two(){
+        XCTAssertTrue(1 == 1)
+        XCTAssertFalse(1 == 2)
+        XCTAssertNil(nil)
+        XCTAssertNotNil(self.presenter)
+        XCTAssertEqual(self.presenter.sumar(numero1: 2, numero2: 2), 4)
+        XCTAssertEqual("Andres", "Andres")
+        XCTAssertGreaterThan(10, 1)
+    }
+    
     func test_Performance_Sut_Dividir() {
         self.measure {
             self.presenter.dividir(numero1: 4, numero2: 2)
